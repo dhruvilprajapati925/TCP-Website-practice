@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Reload Supports Modifying Generics!</title>
+    <link rel="stylesheet" href="tcp_website.css">
+    <link rel="stylesheet" href="/css/fluent--call-16-regular.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/right_arrow.css">
+    <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/subway--location-.css">
+    <link rel="stylesheet" href="/css/blogs-calendar-icon.css">
+</head>
+<body>
+    <header>
+        <div class="header1">
+            <div class="header1A"> <span>One Stop solutions for your career</span></div>
+            <div class="header1B">
+                <p style="display: inline; margin-left: 701px; margin-top: 0px;">✉ <a href="hello@tcpindia.in"
+                        target="_blank">hello@tcpindia.in</a></p>
+                <i class="fluent--call-16-regular"></i>
+                <p style="display: inline;"> <a href="">+91 9099775550</a></p>
+            </div>
+        </div>
+        <div class="header2">
+            <div class="header2A">
+                <div class="header2A_A"><img src="/img/03c93b.png" alt="" width="100%" height="100%"></div>
+                <div class="header2A_B">
+                    <a href="/tcp_homepage.html" style="margin-left: 744.7px;">Home</a>
+                    <a href="/tcp_aboutpage.html">About</a>
+                    <a href="/tcp_coursespage.html">Courses</a>
+                    <a href="/tcp_servicespage.html">Services</a>
+                    <a href="/tcp_blogs.html">Blogs</a>
+                    <a href="/tcp_contactpage.html">Contact</a>
+                    <a href="/tcp_login_page.html" target="_blank" style="text-decoration: none;">
+                        <button><i class="fa-regular fa-user" style="font-size: 12px;"></i> Student Login</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="blogs_2_details" >
+        <div class="blogs_2_details_main">
+            <div class="blogs_2_details_main_title">
+                <h2>Why IT Training is Important for Students | Unlocking Future Opportunities</h2>
+            </div>
+            <div class="blogs_2_details_main_part1">
+                <div class="blogs_2_details_main_part1_bg_img">
+                    <div class="blogs_2_details_main_part1_bg_img_date">
+                        <span class="bitcoin-icons--calendar-outline" style="margin-left: 19px;"> </span>
+                        <span style="color: white; font-family: sans-serif; font-size: 12px; margin-top: 10px; "> Oct 06, 2023</span>
+                    </div>
+                </div>
+                <p class="blogs2_part2_p">If you change generics in your code, Hot Reload can enforce the changes without restarting the app.</p>
+                <p class="blogs2_part2_p">Hot Reload is a powerful .NET feature that lets you edit your code while your app is running, and implements those changes without completely rebuilding your app. Hot Reload supports many of the common edits .NET developers make, but we always look at adding new capabilities with each new .NET version. After making a change to your code, the compiler analyzes the edit to see if the runtime supports it. If the change is unsupported, the compiler or Visual Studio tells you that your app needs to be restarted for the change to take effect – we call this a “Rude Edit”. Decreasing the amount of Rude Edits is one of the ways we make Hot Reload more versatile for all our .NET developers – which is why we’re excited to announce that in .NET 8, Hot Reload supports modifying Generics!
+                </p>
+                <h2 class="blogs2_part2_h2" style="margin-top: 10px;">Supported Generic Scenarios</h2>
+                <p class="blogs2_part2_p">The supported generic scenarios for Hot Reload are:</p>
+                <ul class="blogs2_part2_ul">
+                   <li class="blogs2_part2_li">Add new (static, instance) method to a (non)generic type.</li>
+                   <li class="blogs2_part2_li">Add new (static instance) generic method to a (non)generic type.</li>
+                   <li class="blogs2_part2_li">Edit existing (static, instance) method on a (non)generic type.</li>
+                   <li class="blogs2_part2_li">Edit existing (static, instance) generic method on a (non)generic type.</li> 
+                </ul>
+                <p class="blogs2_part2_p">To test out these features yourself, you can download the latest Visual Studio 17.7 preview or the latest .NET 8 preview. Hot Reload is available for use anywhere you use .NET.</p>
+                <h3 class="blogs2_part2_h3">Example 1 – Add new static generic method to a non-generic type</h3>
+                <p class="blogs2_part2_p">Adding a generic method to a non-generic type is supported in Hot Reload as of .NET 8.</p>
+                <div class="blogs2_part2_pre" tabindex="0">
+                    <div class="blogs2_part2_code">
+                        <span class="blogs2_part2_span">using</span>
+                        <span class="blogs2_part2_span">System</span>
+                        <span class="blogs2_part2_span">;</span>
+                        <span class="blogs2_part2_span">public</span>
+                        <span class="blogs2_part2_span">class</span>
+                        <span class="blogs2_part2_span">AddGenericMethod1</span>
+                        <span class="blogs2_part2_span">{</span>
+                        <span class="blogs2_part2_span">//The edit is removing the comment below</span>
+                        <span class="blogs2_part2_span">//static void Foo<T>()</span>
+                        <span class="blogs2_part2_span">//{</span>
+                        <span class="blogs2_part2_span">//   Console.WriteLine(1);</span>
+                        <span class="blogs2_part2_span">//}</span>
+                        <span class="blogs2_part2_span">public</span>
+                        <span class="blogs2_part2_span">static</span>
+                        <span class="blogs2_part2_span">void</span>
+                        <span class="blogs2_part2_span">Main</span>
+                        <span class="blogs2_part2_span">()</span>
+                        <span class="blogs2_part2_span">{</span>
+                        <span class="blogs2_part2_span">Foo</span>
+                        <span class="blogs2_part2_span"><int></span>
+                        <span class="blogs2_part2_span">();</span>
+                        <span class="blogs2_part2_span">Console</span>
+                        <span class="blogs2_part2_span">.</span>
+                        <span class="blogs2_part2_span">WriteLine</span>
+                        <span class="blogs2_part2_span">(</span>
+                        <span class="blogs2_part2_span">2</span>
+                        <span class="blogs2_part2_span">);</span>
+                        <span class="blogs2_part2_span">}</span>
+                        <span class="blogs2_part2_span">}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
